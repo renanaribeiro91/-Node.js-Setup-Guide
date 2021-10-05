@@ -30,6 +30,11 @@
       "@config/*": [
         "./src/config/*"
       ]
+    
     }
-  }
+  },
+  "include":[
+    "src/*"
+  ]
+  
 }
