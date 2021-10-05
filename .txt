@@ -1,0 +1,70 @@
+INSTALAR TODAS ESSAS DEP.
+
+   @babel/cli  @babel/core @babel/node @babel/preset-env @babel/preset-typescript @types/express @types/jest @typescript-eslint/eslint-plugin @typescript-eslint/parser
+    babel-plugin-module-resolver 
+    eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise eslint-plugin-standard
+    jest prettier ts-jest ts -node-dev tsconfig-paths typescript
+
+[
+COMANDOS SCRIPT -DEV(GO)
+{
+    "ts-node-dev": tsc + node + nodemon,
+    "respawn":restart total quando faz alteração,
+    transpile-only: não procure por error na tipagem pra acelerar, eslint faz,
+}
+BUILD
+{
+BABEL:TRANSIPALOR
+SRC : PASTA DO PROJETO
+--EXTENSION : QUAL ARQUIVO VAI PROCURAR /*JS,TS/
+--OUT DIR : PRA ONDE JOGAR O CODIGO COMPILADO
+--COPY-FYLES : COPIA TUDO QUE TEM DENTRO DA PASTA CONVERTENDO PRA JS
+}
+]
+
+
+TSCONFIG.JSON / TSC --INIT
+{
+    TARGET:ES2017 - ACIMA DE 2017
+    ALLOWJS:TRUE - PERMITIR IMPORTAR ARQUIVO JS PARA TS
+    LIB[ES6]
+    TYPEROOTS - SOBREESCREVER TIPAGEM
+    RESOLVEJSONMODULE - PERMITE FAZER IMPORTAÇÕES ARQUIVOS JSON
+    PATHRESOLVE {
+        BASEURL "." = A PARTIR DESSE PONTO(PASTA)
+        LOCALIZAR AS SUBPASTAS BOTANDO APENAS "@"
+    }
+    INCLUIDE = PRA NÃO COMPILAR , ENTENDER QUE NÃO É DO TYPESCRIPT
+}
+
+ESLINT --INIT
+INSTALAÇÃO , INSTALAR EXTENSÃO NO VSCODE
+{
+    CODE STYLE,JAVASCRIPT[IMPORT,EXPORT],NONE,TYPES,NODE,POPULAR STYLE,AIRBNB,TIPO JSON,YES
+}
+
+
+JEST -- INIT (TESTE) / TS-JEST(LER TYPESCRIPT) / @TYPES/JEST
+INSTALAÇÃO
+{
+    YES,NODE,NÃO,CLEAR MOCKS(SIM),
+}
+JEST.CONFIG
+{
+PRESSET:TES-JEST = PRA FUNCIONAR,
+COMPILEROPTION = COMPILA PRA QUE O JEST ENTENDA
+PATHMODULENAME = MAPEAMENTO DE CAMINHOS SUBPASTAS
+MODULENAMEMAPPER = PROCURAR A PARTIR DESSE CAMINHO(ONDE ESTA O JEST)
+}
+
+BABEL (TRANSPILADOR PARA JS)
+BABEL.CONFIG.JS
+{
+PLUGUINS - MODULE RESOLVER = SERVE DE PATHRESOLVE PARA SUBPASTAS
+IGNORE '**/* = IGNORAR QUALQUER ARQUIVO DE TESTE
+}
+
+
+
+
+
